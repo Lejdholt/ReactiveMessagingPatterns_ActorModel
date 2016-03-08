@@ -63,9 +63,9 @@ namespace ReactiveMessagingPatterns.ActorModel.co.vaughnvernon.reactiveenterpris
     {
         public OrderProcessor()
         {
-            Receive<ProcessOrder>(o =>
+            Receive<ProcessOrder>(command =>
             {
-                Context.GetLogger().Info($"OrderProcessor: received: {o}");
+                Context.GetLogger().Info($"OrderProcessor: received: {command}");
                 WireTapDiver.CompletedStep();
             });
         }
