@@ -1,5 +1,6 @@
 using System.Threading;
 using Akka.TestKit.Xunit2;
+using Xunit.Abstractions;
 using Xunit.Sdk;
 
 namespace ReactiveMessagingPatterns.ActorModel.co.vaughnvernon.reactiveenterprise
@@ -11,7 +12,7 @@ namespace ReactiveMessagingPatterns.ActorModel.co.vaughnvernon.reactiveenterpris
         private static CountdownEvent canStart;
         private static CountdownEvent canComplete;
 
-        public CompletableApp(int steps) : base(output: new TestOutputHelper())
+        public CompletableApp(int steps, ITestOutputHelper helper) : base(output: helper)
         {
             completion = new CountdownEvent(steps);
             canStart = new CountdownEvent(1);

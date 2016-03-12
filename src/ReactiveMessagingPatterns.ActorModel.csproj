@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8580CF61-83FF-41F5-82A8-146D6AA5AF07}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ReactiveMessagingPatterns.ActorModel1</RootNamespace>
+    <AssemblyName>ReactiveMessagingPatterns.ActorModel1</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Akka, Version=1.0.6.16, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Akka.1.0.6\lib\net45\Akka.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Akka.TestKit, Version=1.0.6.16, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Akka.TestKit.1.0.6\lib\net45\Akka.TestKit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Akka.TestKit.Xunit2, Version=1.0.6.16, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Akka.TestKit.Xunit2.1.0.6\lib\net45\Akka.TestKit.Xunit2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="xunit.abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.abstractions.2.0.0\lib\net35\xunit.abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="xunit.assert, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.assert.2.1.0\lib\dotnet\xunit.assert.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="xunit.core, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.extensibility.core.2.1.0\lib\dotnet\xunit.core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="xunit.execution.desktop, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.extensibility.execution.2.1.0\lib\net45\xunit.execution.desktop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="co\vaughnvernon\reactiveenterprise\CompletableApp.cs" />
+    <Compile Include="co\vaughnvernon\reactiveenterprise\messagemetadata\MessageMetaDataDriver.cs" />
+    <Compile Include="co\vaughnvernon\reactiveenterprise\NicePrint.cs" />
+    <Compile Include="co\vaughnvernon\reactiveenterprise\requestreply\RequestReplay.cs" />
+    <Compile Include="co\vaughnvernon\reactiveenterprise\wiretap\WireTap.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="co\vaughnvernon\reactiveenterprise\aggregator\Aggregator.scala" />
+    <None Include="co\vaughnvernon\reactiveenterprise\claimcheck\ClaimCheck.scala" />
+    <None Include="co\vaughnvernon\reactiveenterprise\competingconsumer\CompetingConsumer.scala" />
+    <None Include="co\vaughnvernon\reactiveenterprise\CompletableApp.scala" />
+    <None Include="co\vaughnvernon\reactiveenterprise\contentbasedrouter\ContentBasedRouter.scala" />
+    <None Include="co\vaughnvernon\reactiveenterprise\contentenricher\ContentEnricher.scala" />
+    <None Include="co\vaughnvernon\reactiveenterprise\contentfilter\ContentFilter.scala" />
+    <None Include="co\vaughnvernon\reactiveenterprise\datatypechannel\DatatypeChannel.scala" />
+    <None Include="co\vaughnvernon\reactiveenterprise\domainmodel\DomainModelPrototype.scala" />
+    <None Include="co\vaughnvernon\reactiveenterprise\dynamicrouter\DynamicRouter.scala" />
+    <None Include="co\vaughnvernon\reactiveenterprise\envelopewrapper\EnvelopeWrapper.scala" />
+    <None Include="co\vaughnvernon\reactiveenterprise\guaranteeddelivery\GuaranteedDelivery.scala" />
+    <None Include="co\vaughnvernon\reactiveenterprise\idempotentreceiver\Account.scala" />
+    <None Include="co\vaughnvernon\reactiveenterprise\idempotentreceiver\RiskAssessment.scala" />
+    <None Include="co\vaughnvernon\reactiveenterprise\messagebus\MessageBus.scala" />
+    <None Include="co\vaughnvernon\reactiveenterprise\messageexpiration\MessageExpiration.scala" />
+    <None Include="co\vaughnvernon\reactiveenterprise\messagefilter\MessageFilter.scala" />
+    <None Include="co\vaughnvernon\reactiveenterprise\messagemetadata\MessageMetadataDriver.scala" />
+    <None Include="co\vaughnvernon\reactiveenterprise\messagerouter\MessageRouter.scala" />
+    <None Include="co\vaughnvernon\reactiveenterprise\messagingbridge\MessagingBridge.scala" />
+    <None Include="co\vaughnvernon\reactiveenterprise\messagingbridge\RabbitMQBridge.scala" />
+    <None Include="co\vaughnvernon\reactiveenterprise\pipesandfilters\PipesAndFilters.scala" />
+    <None Include="co\vaughnvernon\reactiveenterprise\pointtopointchannel\PointToPointChannel.scala" />
+    <None Include="co\vaughnvernon\reactiveenterprise\pollingconsumer\DevicePollingConsumer.scala" />
+    <None Include="co\vaughnvernon\reactiveenterprise\pollingconsumer\PollingConsumer.scala" />
+    <None Include="co\vaughnvernon\reactiveenterprise\processmanager\ProcessManager.scala" />
+    <None Include="co\vaughnvernon\reactiveenterprise\publishsubscribe\SubClassification.scala" />
+    <None Include="co\vaughnvernon\reactiveenterprise\recipientlist\RecipientList.scala" />
+    <None Include="co\vaughnvernon\reactiveenterprise\requestreply\RequestReply.scala" />
+    <None Include="co\vaughnvernon\reactiveenterprise\resequencer\Resequencer.scala" />
+    <None Include="co\vaughnvernon\reactiveenterprise\returnaddress\ReturnAddress.scala" />
+    <None Include="co\vaughnvernon\reactiveenterprise\returnaddress\ReturnAddressInMessage.scala" />
+    <None Include="co\vaughnvernon\reactiveenterprise\routingslip\RoutingSlip.scala" />
+    <None Include="co\vaughnvernon\reactiveenterprise\scattergather\ScatterGather.scala" />
+    <None Include="co\vaughnvernon\reactiveenterprise\selectiveconsumer\SelectiveConsumer.scala" />
+    <None Include="co\vaughnvernon\reactiveenterprise\smartproxy\SmartProxy.scala" />
+    <None Include="co\vaughnvernon\reactiveenterprise\splitter\Splitter.scala" />
+    <None Include="co\vaughnvernon\reactiveenterprise\transactionalactor\EventSourced.scala" />
+    <None Include="co\vaughnvernon\reactiveenterprise\wiretap\WireTap.scala" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

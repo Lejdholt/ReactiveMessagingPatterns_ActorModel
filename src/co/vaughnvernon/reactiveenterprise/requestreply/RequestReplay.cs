@@ -1,6 +1,7 @@
 ﻿using Akka.Actor;
 using Akka.Event;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace ReactiveMessagingPatterns.ActorModel.co.vaughnvernon.reactiveenterprise.requestreply
 {
@@ -36,7 +37,7 @@ namespace ReactiveMessagingPatterns.ActorModel.co.vaughnvernon.reactiveenterpris
 
     public class RequestReplayDiver : CompletableApp
     {
-        public RequestReplayDiver() : base(1)
+        public RequestReplayDiver(ITestOutputHelper helper) : base(1, helper)
         {
         }
 

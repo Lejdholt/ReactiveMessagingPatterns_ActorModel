@@ -1,12 +1,13 @@
 ﻿using Akka.Actor;
 using Akka.Event;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace ReactiveMessagingPatterns.ActorModel.co.vaughnvernon.reactiveenterprise.wiretap
 {
     public class WireTapDiver : CompletableApp
     {
-        public WireTapDiver() : base(2)
+        public WireTapDiver(ITestOutputHelper helper) : base(2, helper)
         {
 
         }

@@ -3,13 +3,14 @@ using System.Linq;
 using Akka.Actor;
 using Akka.Event;
 using Xunit;
+using Xunit.Abstractions;
 using static ReactiveMessagingPatterns.ActorModel.co.vaughnvernon.reactiveenterprise.messagemetadata.MetaData;
 
 namespace ReactiveMessagingPatterns.ActorModel.co.vaughnvernon.reactiveenterprise.messagemetadata
 {
     public class MessageMetaDataDriver : CompletableApp
     {
-        public MessageMetaDataDriver() : base(3)
+        public MessageMetaDataDriver(ITestOutputHelper helper) : base(3, helper)
         {
         }
 
