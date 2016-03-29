@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Linq;
 using Akka.Actor;
 using Akka.Event;
+using ReactiveMessagingPatterns.ActorModel1.co.vaughnvernon.reactiveenterprise;
 using Xunit;
 using Xunit.Abstractions;
 using static ReactiveMessagingPatterns.ActorModel.co.vaughnvernon.reactiveenterprise.messagemetadata.MetaData;
@@ -182,16 +182,6 @@ namespace ReactiveMessagingPatterns.ActorModel.co.vaughnvernon.reactiveenterpris
         public void Report(SomeMessage message, string heading = "recevied")
         {
             Context.GetLogger().Info($"{Self.Path.Name} {heading}:{message}");
-        }
-    }
-
-    public static class Extensions
-    {
-        public static TObject[] With<TObject>(this TObject[] original, TObject subject)
-        {
-            var clone = original.ToList();
-            clone.Add(subject);
-            return clone.ToArray();
         }
     }
 }

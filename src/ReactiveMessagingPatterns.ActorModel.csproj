@@ -75,7 +75,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="co\vaughnvernon\reactiveenterprise\aggregator\Aggregator.cs" />
     <Compile Include="co\vaughnvernon\reactiveenterprise\CompletableApp.cs" />
+    <Compile Include="co\vaughnvernon\reactiveenterprise\Extensions.cs" />
     <Compile Include="co\vaughnvernon\reactiveenterprise\messagemetadata\MessageMetaDataDriver.cs" />
     <Compile Include="co\vaughnvernon\reactiveenterprise\NicePrint.cs" />
     <Compile Include="co\vaughnvernon\reactiveenterprise\requestreply\RequestReplay.cs" />

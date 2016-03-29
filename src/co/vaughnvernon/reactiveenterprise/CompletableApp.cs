@@ -1,7 +1,6 @@
 using System.Threading;
 using Akka.TestKit.Xunit2;
 using Xunit.Abstractions;
-using Xunit.Sdk;
 
 namespace ReactiveMessagingPatterns.ActorModel.co.vaughnvernon.reactiveenterprise
 {
