@@ -80,6 +80,7 @@
     <Compile Include="co\vaughnvernon\reactiveenterprise\Extensions.cs" />
     <Compile Include="co\vaughnvernon\reactiveenterprise\messagemetadata\MessageMetaDataDriver.cs" />
     <Compile Include="co\vaughnvernon\reactiveenterprise\NicePrint.cs" />
+    <Compile Include="co\vaughnvernon\reactiveenterprise\publishsubscribe\SubClassification.cs" />
     <Compile Include="co\vaughnvernon\reactiveenterprise\requestreply\RequestReplay.cs" />
     <Compile Include="co\vaughnvernon\reactiveenterprise\wiretap\WireTap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
