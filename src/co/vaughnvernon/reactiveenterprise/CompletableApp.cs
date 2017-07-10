@@ -28,5 +28,12 @@ namespace ReactiveMessagingPatterns.ActorModel.co.vaughnvernon.reactiveenterpris
         {
             completion.Signal();
         }
+
+        public static void CompleteAll() {
+            while (completion.CurrentCount > 0)
+            {
+                completion.Signal();
+            }
+        }
     }
 }

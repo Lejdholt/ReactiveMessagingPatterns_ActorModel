@@ -1,10 +1,7 @@
 using System;
-using System.Reflection;
 using Akka.Actor;
 using Akka.Util;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
-using Newtonsoft.Json.Serialization;
 
 namespace ReactiveMessagingPatterns.ActorModel
 {
