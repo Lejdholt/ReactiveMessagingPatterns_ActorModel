@@ -6,6 +6,7 @@ namespace ReactiveMessagingPatterns.ActorModel.co.vaughnvernon.reactiveenterpris
 {
     public class CompletableApp : TestKit
     {
+        protected readonly ITestOutputHelper helper;
 
         private static CountdownEvent completion;
         private static CountdownEvent canStart;
@@ -13,6 +14,7 @@ namespace ReactiveMessagingPatterns.ActorModel.co.vaughnvernon.reactiveenterpris
 
         public CompletableApp(int steps, ITestOutputHelper helper) : base(output: helper)
         {
+            this.helper = helper;
             completion = new CountdownEvent(steps);
             canStart = new CountdownEvent(1);
             canComplete = new CountdownEvent(1);
